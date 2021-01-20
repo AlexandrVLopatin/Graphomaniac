@@ -292,7 +292,6 @@ namespace Graphomaniac
             this.connOptsPortsComboBox.Name = "connOptsPortsComboBox";
             this.connOptsPortsComboBox.Size = new System.Drawing.Size(74, 21);
             this.connOptsPortsComboBox.TabIndex = 19;
-            this.connOptsPortsComboBox.Text = "COM5";
             // 
             // label1
             // 
