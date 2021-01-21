@@ -86,12 +86,14 @@ namespace Graphomaniac
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 58);
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(690, 58);
             this.textBox1.MaximumSize = new System.Drawing.Size(2048, 150);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(651, 96);
+            this.textBox1.Size = new System.Drawing.Size(551, 85);
             this.textBox1.TabIndex = 8;
             // 
             // chart
@@ -326,7 +328,7 @@ namespace Graphomaniac
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(687, 59);
+            this.label4.Location = new System.Drawing.Point(13, 68);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(30, 13);
             this.label4.TabIndex = 21;
@@ -335,7 +337,7 @@ namespace Graphomaniac
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(687, 81);
+            this.label5.Location = new System.Drawing.Point(13, 90);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 13);
             this.label5.TabIndex = 22;
@@ -344,7 +346,7 @@ namespace Graphomaniac
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(687, 104);
+            this.label6.Location = new System.Drawing.Point(13, 113);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 13);
             this.label6.TabIndex = 23;
@@ -353,7 +355,7 @@ namespace Graphomaniac
             // minLabel1
             // 
             this.minLabel1.AutoSize = true;
-            this.minLabel1.Location = new System.Drawing.Point(723, 59);
+            this.minLabel1.Location = new System.Drawing.Point(49, 68);
             this.minLabel1.Name = "minLabel1";
             this.minLabel1.Size = new System.Drawing.Size(13, 13);
             this.minLabel1.TabIndex = 24;
@@ -362,7 +364,7 @@ namespace Graphomaniac
             // maxLabel1
             // 
             this.maxLabel1.AutoSize = true;
-            this.maxLabel1.Location = new System.Drawing.Point(723, 81);
+            this.maxLabel1.Location = new System.Drawing.Point(49, 90);
             this.maxLabel1.Name = "maxLabel1";
             this.maxLabel1.Size = new System.Drawing.Size(13, 13);
             this.maxLabel1.TabIndex = 25;
@@ -371,7 +373,7 @@ namespace Graphomaniac
             // emaLabel1
             // 
             this.emaLabel1.AutoSize = true;
-            this.emaLabel1.Location = new System.Drawing.Point(723, 104);
+            this.emaLabel1.Location = new System.Drawing.Point(49, 113);
             this.emaLabel1.Name = "emaLabel1";
             this.emaLabel1.Size = new System.Drawing.Size(13, 13);
             this.emaLabel1.TabIndex = 26;
@@ -379,7 +381,7 @@ namespace Graphomaniac
             // 
             // resetStatsBtn
             // 
-            this.resetStatsBtn.Location = new System.Drawing.Point(690, 131);
+            this.resetStatsBtn.Location = new System.Drawing.Point(12, 140);
             this.resetStatsBtn.Name = "resetStatsBtn";
             this.resetStatsBtn.Size = new System.Drawing.Size(75, 23);
             this.resetStatsBtn.TabIndex = 27;
@@ -390,7 +392,7 @@ namespace Graphomaniac
             // emaLabel2
             // 
             this.emaLabel2.AutoSize = true;
-            this.emaLabel2.Location = new System.Drawing.Point(849, 106);
+            this.emaLabel2.Location = new System.Drawing.Point(175, 115);
             this.emaLabel2.Name = "emaLabel2";
             this.emaLabel2.Size = new System.Drawing.Size(13, 13);
             this.emaLabel2.TabIndex = 33;
@@ -399,7 +401,7 @@ namespace Graphomaniac
             // maxLabel2
             // 
             this.maxLabel2.AutoSize = true;
-            this.maxLabel2.Location = new System.Drawing.Point(849, 83);
+            this.maxLabel2.Location = new System.Drawing.Point(175, 92);
             this.maxLabel2.Name = "maxLabel2";
             this.maxLabel2.Size = new System.Drawing.Size(13, 13);
             this.maxLabel2.TabIndex = 32;
@@ -408,7 +410,7 @@ namespace Graphomaniac
             // minLabel2
             // 
             this.minLabel2.AutoSize = true;
-            this.minLabel2.Location = new System.Drawing.Point(849, 61);
+            this.minLabel2.Location = new System.Drawing.Point(175, 70);
             this.minLabel2.Name = "minLabel2";
             this.minLabel2.Size = new System.Drawing.Size(13, 13);
             this.minLabel2.TabIndex = 31;
@@ -417,7 +419,7 @@ namespace Graphomaniac
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(813, 106);
+            this.label10.Location = new System.Drawing.Point(139, 115);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(33, 13);
             this.label10.TabIndex = 30;
@@ -426,7 +428,7 @@ namespace Graphomaniac
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(813, 83);
+            this.label11.Location = new System.Drawing.Point(139, 92);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(33, 13);
             this.label11.TabIndex = 29;
@@ -435,7 +437,7 @@ namespace Graphomaniac
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(813, 61);
+            this.label12.Location = new System.Drawing.Point(139, 70);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(30, 13);
             this.label12.TabIndex = 28;
@@ -444,7 +446,7 @@ namespace Graphomaniac
             // emaLabel3
             // 
             this.emaLabel3.AutoSize = true;
-            this.emaLabel3.Location = new System.Drawing.Point(971, 106);
+            this.emaLabel3.Location = new System.Drawing.Point(297, 115);
             this.emaLabel3.Name = "emaLabel3";
             this.emaLabel3.Size = new System.Drawing.Size(13, 13);
             this.emaLabel3.TabIndex = 39;
@@ -453,7 +455,7 @@ namespace Graphomaniac
             // maxLabel3
             // 
             this.maxLabel3.AutoSize = true;
-            this.maxLabel3.Location = new System.Drawing.Point(971, 83);
+            this.maxLabel3.Location = new System.Drawing.Point(297, 92);
             this.maxLabel3.Name = "maxLabel3";
             this.maxLabel3.Size = new System.Drawing.Size(13, 13);
             this.maxLabel3.TabIndex = 38;
@@ -462,7 +464,7 @@ namespace Graphomaniac
             // minLabel3
             // 
             this.minLabel3.AutoSize = true;
-            this.minLabel3.Location = new System.Drawing.Point(971, 61);
+            this.minLabel3.Location = new System.Drawing.Point(297, 70);
             this.minLabel3.Name = "minLabel3";
             this.minLabel3.Size = new System.Drawing.Size(13, 13);
             this.minLabel3.TabIndex = 37;
@@ -471,7 +473,7 @@ namespace Graphomaniac
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(935, 106);
+            this.label16.Location = new System.Drawing.Point(261, 115);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(33, 13);
             this.label16.TabIndex = 36;
@@ -480,7 +482,7 @@ namespace Graphomaniac
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(935, 83);
+            this.label17.Location = new System.Drawing.Point(261, 92);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(33, 13);
             this.label17.TabIndex = 35;
@@ -489,7 +491,7 @@ namespace Graphomaniac
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(935, 61);
+            this.label18.Location = new System.Drawing.Point(261, 70);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(30, 13);
             this.label18.TabIndex = 34;
@@ -498,7 +500,7 @@ namespace Graphomaniac
             // emaLabel4
             // 
             this.emaLabel4.AutoSize = true;
-            this.emaLabel4.Location = new System.Drawing.Point(1090, 106);
+            this.emaLabel4.Location = new System.Drawing.Point(416, 115);
             this.emaLabel4.Name = "emaLabel4";
             this.emaLabel4.Size = new System.Drawing.Size(13, 13);
             this.emaLabel4.TabIndex = 45;
@@ -507,7 +509,7 @@ namespace Graphomaniac
             // maxLabel4
             // 
             this.maxLabel4.AutoSize = true;
-            this.maxLabel4.Location = new System.Drawing.Point(1090, 83);
+            this.maxLabel4.Location = new System.Drawing.Point(416, 92);
             this.maxLabel4.Name = "maxLabel4";
             this.maxLabel4.Size = new System.Drawing.Size(13, 13);
             this.maxLabel4.TabIndex = 44;
@@ -516,7 +518,7 @@ namespace Graphomaniac
             // minLabel4
             // 
             this.minLabel4.AutoSize = true;
-            this.minLabel4.Location = new System.Drawing.Point(1090, 61);
+            this.minLabel4.Location = new System.Drawing.Point(416, 70);
             this.minLabel4.Name = "minLabel4";
             this.minLabel4.Size = new System.Drawing.Size(13, 13);
             this.minLabel4.TabIndex = 43;
@@ -525,7 +527,7 @@ namespace Graphomaniac
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(1054, 106);
+            this.label22.Location = new System.Drawing.Point(380, 115);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(33, 13);
             this.label22.TabIndex = 42;
@@ -534,7 +536,7 @@ namespace Graphomaniac
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(1054, 83);
+            this.label23.Location = new System.Drawing.Point(380, 92);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(33, 13);
             this.label23.TabIndex = 41;
@@ -543,7 +545,7 @@ namespace Graphomaniac
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(1054, 61);
+            this.label24.Location = new System.Drawing.Point(380, 70);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(30, 13);
             this.label24.TabIndex = 40;
@@ -552,7 +554,7 @@ namespace Graphomaniac
             // emaLabel5
             // 
             this.emaLabel5.AutoSize = true;
-            this.emaLabel5.Location = new System.Drawing.Point(1205, 106);
+            this.emaLabel5.Location = new System.Drawing.Point(531, 115);
             this.emaLabel5.Name = "emaLabel5";
             this.emaLabel5.Size = new System.Drawing.Size(13, 13);
             this.emaLabel5.TabIndex = 51;
@@ -561,7 +563,7 @@ namespace Graphomaniac
             // maxLabel5
             // 
             this.maxLabel5.AutoSize = true;
-            this.maxLabel5.Location = new System.Drawing.Point(1205, 83);
+            this.maxLabel5.Location = new System.Drawing.Point(531, 92);
             this.maxLabel5.Name = "maxLabel5";
             this.maxLabel5.Size = new System.Drawing.Size(13, 13);
             this.maxLabel5.TabIndex = 50;
@@ -570,7 +572,7 @@ namespace Graphomaniac
             // minLabel5
             // 
             this.minLabel5.AutoSize = true;
-            this.minLabel5.Location = new System.Drawing.Point(1205, 61);
+            this.minLabel5.Location = new System.Drawing.Point(531, 70);
             this.minLabel5.Name = "minLabel5";
             this.minLabel5.Size = new System.Drawing.Size(13, 13);
             this.minLabel5.TabIndex = 49;
@@ -579,7 +581,7 @@ namespace Graphomaniac
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(1169, 106);
+            this.label28.Location = new System.Drawing.Point(495, 115);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(33, 13);
             this.label28.TabIndex = 48;
@@ -588,7 +590,7 @@ namespace Graphomaniac
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(1169, 83);
+            this.label29.Location = new System.Drawing.Point(495, 92);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(33, 13);
             this.label29.TabIndex = 47;
@@ -597,7 +599,7 @@ namespace Graphomaniac
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(1169, 61);
+            this.label30.Location = new System.Drawing.Point(495, 70);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(30, 13);
             this.label30.TabIndex = 46;

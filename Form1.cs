@@ -278,8 +278,14 @@ namespace Graphomaniac
         {
             if (!serialPort.IsOpen)
             {
-                Connect();
-                comPortsConnectBtn.Text = "Disconnect";
+                try
+                {
+                    Connect();
+                    comPortsConnectBtn.Text = "Disconnect";
+                } catch
+                {
+                    MessageBox.Show("Connection error");
+                }
             }
             else
             {
