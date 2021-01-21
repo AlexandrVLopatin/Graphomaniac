@@ -1,6 +1,7 @@
 ﻿using LiveCharts;
 using LiveCharts.Configurations;
 using LiveCharts.Wpf;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.IO.Ports;
@@ -26,9 +27,12 @@ namespace Graphomaniac
             InitializeComponent();
             UpdateCOMPortsList();
             UpdateParityList();
+
             connOptsDataBitsDropdown.SelectedIndex = 3;
             connOptsStopBitsDropdown.SelectedIndex = 0;
             serialPort = new SerialPort();
+
+            ReadRegistryConfig();
 
             var mapper = Mappers.Xy<MeasureModel>()
                 .X(model => model.DateTime.Ticks)
@@ -93,6 +97,50 @@ namespace Graphomaniac
             {
                 MinValue = 0
             });
+        }
+
+        private void ReadRegistryConfig()
+        {
+            RegistryKey localUserKey = Registry.CurrentUser;
+            RegistryKey softwareKey = localUserKey.OpenSubKey("Software");
+            RegistryKey graphomaniacKey = softwareKey.OpenSubKey("Graphomaniac");
+            if (graphomaniacKey == null)
+            {
+                return;
+            }
+
+            connOptsPortsComboBox.Text = graphomaniacKey.GetValue("comport").ToString();
+            connOptsBaudDropdown.Text = graphomaniacKey.GetValue("baud").ToString();
+            connOptsParityDropdown.SelectedIndex = Convert.ToInt32(graphomaniacKey.GetValue("parity"));
+            connOptsDataBitsDropdown.SelectedIndex = Convert.ToInt32(graphomaniacKey.GetValue("databits"));
+            connOptsStopBitsDropdown.SelectedIndex = Convert.ToInt32(graphomaniacKey.GetValue("stopbits"));
+
+            graphomaniacKey.Close();
+            softwareKey.Close();
+            localUserKey.Close();
+        }
+
+        private void SaveRegistryConfig()
+        {
+            RegistryKey localUserKey = Registry.CurrentUser;
+            RegistryKey softwareKey = localUserKey.OpenSubKey("Software", true);
+            RegistryKey graphomaniacKey = softwareKey.OpenSubKey("Graphomaniac", true);
+
+            if (graphomaniacKey == null)
+            {
+                softwareKey.CreateSubKey("Graphomaniac");
+                graphomaniacKey = softwareKey.OpenSubKey("Graphomaniac");
+            }
+
+            graphomaniacKey.SetValue("comport", connOptsPortsComboBox.Text);
+            graphomaniacKey.SetValue("baud", connOptsBaudDropdown.Text);
+            graphomaniacKey.SetValue("parity", connOptsParityDropdown.SelectedIndex);
+            graphomaniacKey.SetValue("databits", connOptsDataBitsDropdown.SelectedIndex);
+            graphomaniacKey.SetValue("stopbits", connOptsStopBitsDropdown.SelectedIndex);
+
+            graphomaniacKey.Close();
+            softwareKey.Close();
+            localUserKey.Close();
         }
 
         private void UpdateCOMPortsList()
@@ -332,6 +380,7 @@ namespace Graphomaniac
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             serialPort.Close();
+            SaveRegistryConfig();
         }
 
         private void animateCheckBox_CheckedChanged(object sender, EventArgs e)
