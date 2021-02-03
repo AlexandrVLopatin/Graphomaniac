@@ -70,6 +70,13 @@ namespace Graphomaniac
                 }
             });
 
+            chart.AxisY.Add(
+                new Axis
+                {
+                    MinValue = 0
+                }
+            );
+
             chart.DisableAnimations = true;
             chart.Zoom = ZoomingOptions.X;
             chart.Pan = PanningOptions.X;
@@ -93,10 +100,11 @@ namespace Graphomaniac
 
 
             chart2.AxisY.Add(
-            new Axis
-            {
-                MinValue = 0
-            });
+                new Axis
+                {
+                    MinValue = 0
+                }
+            );
         }
 
         private void ReadRegistryConfig()
@@ -201,8 +209,6 @@ namespace Graphomaniac
 
                 string[] variables = text.Split('\n')[0].Split(',');
 
-                var now = DateTime.Now;
-
                 int overhead = 0;
                 try
                 {
@@ -210,8 +216,9 @@ namespace Graphomaniac
                 }
                 catch { }
 
-
                 int zeroCount = 0;
+                var now = DateTime.Now;
+
                 for (int i = 0; i < variables.Count(); i++)
                 {
                     if (i >= 5) continue;
@@ -316,7 +323,7 @@ namespace Graphomaniac
 
         private void ComPortsBaudDropdown_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '-')
             {
                 e.Handled = true;
             }
@@ -386,6 +393,11 @@ namespace Graphomaniac
         private void animateCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             chart2.DisableAnimations = !animateCheckBox.Checked;
+        }
+
+        private void setMinValueBtn_Click(object sender, EventArgs e)
+        {
+            chart.AxisY[0].MinValue = Convert.ToInt32(minValueTextBox.Text);
         }
     }
 

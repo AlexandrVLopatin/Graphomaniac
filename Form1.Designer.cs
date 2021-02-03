@@ -81,6 +81,9 @@ namespace Graphomaniac
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.minValueTextBox = new System.Windows.Forms.TextBox();
+            this.setMinValueBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -605,11 +608,45 @@ namespace Graphomaniac
             this.label30.TabIndex = 46;
             this.label30.Text = "MIN:";
             // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(285, 654);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 13);
+            this.label7.TabIndex = 53;
+            this.label7.Text = "Min value:";
+            // 
+            // minValueTextBox
+            // 
+            this.minValueTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.minValueTextBox.Location = new System.Drawing.Point(343, 651);
+            this.minValueTextBox.Name = "minValueTextBox";
+            this.minValueTextBox.Size = new System.Drawing.Size(56, 20);
+            this.minValueTextBox.TabIndex = 52;
+            this.minValueTextBox.Text = "0";
+            this.minValueTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComPortsBaudDropdown_KeyPress);
+            // 
+            // setMinValueBtn
+            // 
+            this.setMinValueBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.setMinValueBtn.Location = new System.Drawing.Point(405, 649);
+            this.setMinValueBtn.Name = "setMinValueBtn";
+            this.setMinValueBtn.Size = new System.Drawing.Size(61, 23);
+            this.setMinValueBtn.TabIndex = 54;
+            this.setMinValueBtn.Text = "Set";
+            this.setMinValueBtn.UseVisualStyleBackColor = true;
+            this.setMinValueBtn.Click += new System.EventHandler(this.setMinValueBtn_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1253, 697);
+            this.Controls.Add(this.setMinValueBtn);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.minValueTextBox);
             this.Controls.Add(this.emaLabel5);
             this.Controls.Add(this.maxLabel5);
             this.Controls.Add(this.minLabel5);
@@ -712,6 +749,9 @@ namespace Graphomaniac
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label emaLabel5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox minValueTextBox;
+        private System.Windows.Forms.Button setMinValueBtn;
     }
 }
 
