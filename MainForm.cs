@@ -94,7 +94,7 @@ namespace Graphomaniac
                 new ColumnSeries
                 {
                     Title = "",
-                    Values = new ChartValues<double> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+                    Values = new ChartValues<double> { 0, 0, 0, 0, 0, 0 }
                 }
             };
 
