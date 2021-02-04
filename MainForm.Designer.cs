@@ -316,9 +316,9 @@ namespace Graphomaniac
             // chart2
             // 
             this.chart2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.chart2.Location = new System.Drawing.Point(726, 160);
+            this.chart2.Location = new System.Drawing.Point(726, 149);
             this.chart2.Name = "chart2";
-            this.chart2.Size = new System.Drawing.Size(518, 444);
+            this.chart2.Size = new System.Drawing.Size(518, 481);
             this.chart2.TabIndex = 19;
             this.chart2.Text = "cartesianChart1";
             // 
