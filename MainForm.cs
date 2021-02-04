@@ -312,7 +312,7 @@ namespace Graphomaniac
         {
             chart.AxisX[0].MinValue = double.NaN;
             chart.AxisX[0].MaxValue = double.NaN;
-            chart.AxisY[0].MinValue = double.NaN;
+            chart.AxisY[0].MinValue = Convert.ToInt32(minValueTextBox.Text);
             chart.AxisY[0].MaxValue = double.NaN;
         }
 
