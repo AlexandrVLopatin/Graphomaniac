@@ -18,9 +18,9 @@ namespace Graphomaniac
 
         bool pause = false;
         
-        double[] min = new[] { 0d, 0d, 0d, 0d, 0d };
-        double[] max = new[] { 0d, 0d, 0d, 0d, 0d };
-        double[] avg = new[] { 0d, 0d, 0d, 0d, 0d };
+        double[] min = new[] { 0d, 0d, 0d, 0d, 0d, 0d };
+        double[] max = new[] { 0d, 0d, 0d, 0d, 0d, 0d };
+        double[] avg = new[] { 0d, 0d, 0d, 0d, 0d, 0d };
 
         public MainForm()
         {
@@ -42,7 +42,7 @@ namespace Graphomaniac
 
             values = new List<ChartValues<MeasureModel>>();
             chart.Series = new SeriesCollection();
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 6; i++)
             {
                 var chartValues = new ChartValues<MeasureModel>();
                 values.Add(chartValues);
@@ -221,7 +221,7 @@ namespace Graphomaniac
 
                 for (int i = 0; i < variables.Count(); i++)
                 {
-                    if (i >= 5) continue;
+                    if (i >= 6) continue;
 
                     double dvar;
                     try
